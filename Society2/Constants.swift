@@ -12,3 +12,8 @@ import UIKit
 let SHADOW_COLOR: CGFloat = 155.0 / 255.0
 let KEY_UID = "uid"
 
+// Error Codes
+let STATUS_ACCOUNT_NONEXIST = 17011
+let STATUS_WRONG_PASSWORD = 17009
+
+

@@ -65,10 +65,41 @@ class ViewController: UIViewController {
     @IBAction func attemptLogin(sender: AnyObject) {
         if let email = emailField.text where email != "", let pwd = passwordField.text where pwd != "" {
             
+          let credential = FIREmailPasswordAuthProvider.credentialWithEmail(email, password: pwd)
+            FIRAuth.auth()?.signInWithCredential(credential) { (user, error) in
+                
+            if error != nil {
+                print(error)
+                
+                if error?.code == STATUS_WRONG_PASSWORD {
+                    self.showErrorAlert("Wrong password.", msg: "Please try again")
+                }
+                
+                if error?.code == STATUS_ACCOUNT_NONEXIST {
+                    FIRAuth.auth()?.createUserWithEmail(email, password: pwd, completion: { user, error in
+                    
+                        if error != nil {
+                            self.showErrorAlert("Could not create account", msg: "try again")
+                        } else {
+                            NSUserDefaults.standardUserDefaults().setValue(user?.uid, forKey: KEY_UID)
+                            
+                            let credential = FIREmailPasswordAuthProvider.credentialWithEmail(email, password: pwd)
+                            FIRAuth.auth()?.signInWithCredential(credential) { (user, error) in
+                            self.showErrorAlert("Account Created", msg: "Account did not exist, so an account with username \(email) was created")
+                            self.performSegueWithIdentifier("loggedIn", sender: nil)
+                            }
+                        }
+                    })
+                }
+            } else {
+                self.performSegueWithIdentifier("loogedIn", sender: nil)
+                }
+            }
         } else {
             showErrorAlert("Email and password required", msg: "You must enter email and password")
         }
     }
+    
     
     func showErrorAlert(title: String, msg: String) {
         let alert = UIAlertController(title: title, message: msg, preferredStyle: .Alert)
