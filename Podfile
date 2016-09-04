@@ -7,4 +7,6 @@ target 'Society2' do
 
   # Pods for Society2
 pod 'Firebase', '>= 2.3.3'
+pod 'Firebase/Database'
+pod ‘Firebase/Auth'
 end
