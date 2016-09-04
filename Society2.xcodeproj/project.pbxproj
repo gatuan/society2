@@ -13,6 +13,16 @@
 		4EC2E1801D7B9F5B00C463AF /* Society2.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4EC2E17E1D7B9F5B00C463AF /* Society2.xcdatamodeld */; };
 		4EC2E1821D7B9F5B00C463AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4EC2E1811D7B9F5B00C463AF /* Assets.xcassets */; };
 		4EC2E1851D7B9F5B00C463AF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EC2E1831D7B9F5B00C463AF /* LaunchScreen.storyboard */; };
+		4EC2E1951D7BA08500C463AF /* NotoSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4EC2E1911D7BA08500C463AF /* NotoSans-Bold.ttf */; };
+		4EC2E1961D7BA08500C463AF /* NotoSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4EC2E1921D7BA08500C463AF /* NotoSans-BoldItalic.ttf */; };
+		4EC2E1971D7BA08500C463AF /* NotoSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4EC2E1931D7BA08500C463AF /* NotoSans-Italic.ttf */; };
+		4EC2E1981D7BA08500C463AF /* NotoSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4EC2E1941D7BA08500C463AF /* NotoSans-Regular.ttf */; };
+		4EC2E19A1D7BA0A700C463AF /* facebook-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 4EC2E1991D7BA0A700C463AF /* facebook-icon.png */; };
+		4EC2E19C1D7BA0B000C463AF /* logo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4EC2E19B1D7BA0B000C463AF /* logo.jpg */; };
+		4EC2E19E1D7BA24500C463AF /* MaterialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC2E19D1D7BA24500C463AF /* MaterialView.swift */; };
+		4EC2E1A01D7BA2F700C463AF /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC2E19F1D7BA2F700C463AF /* Constants.swift */; };
+		4EC2E1A41D7BA75E00C463AF /* MaterialButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC2E1A31D7BA75E00C463AF /* MaterialButton.swift */; };
+		4EC2E1A61D7BA91F00C463AF /* MaterialTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC2E1A51D7BA91F00C463AF /* MaterialTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +34,16 @@
 		4EC2E1811D7B9F5B00C463AF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4EC2E1841D7B9F5B00C463AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4EC2E1861D7B9F5B00C463AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4EC2E1911D7BA08500C463AF /* NotoSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSans-Bold.ttf"; sourceTree = "<group>"; };
+		4EC2E1921D7BA08500C463AF /* NotoSans-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSans-BoldItalic.ttf"; sourceTree = "<group>"; };
+		4EC2E1931D7BA08500C463AF /* NotoSans-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSans-Italic.ttf"; sourceTree = "<group>"; };
+		4EC2E1941D7BA08500C463AF /* NotoSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSans-Regular.ttf"; sourceTree = "<group>"; };
+		4EC2E1991D7BA0A700C463AF /* facebook-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "facebook-icon.png"; sourceTree = "<group>"; };
+		4EC2E19B1D7BA0B000C463AF /* logo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = logo.jpg; sourceTree = "<group>"; };
+		4EC2E19D1D7BA24500C463AF /* MaterialView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialView.swift; sourceTree = "<group>"; };
+		4EC2E19F1D7BA2F700C463AF /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		4EC2E1A31D7BA75E00C463AF /* MaterialButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialButton.swift; sourceTree = "<group>"; };
+		4EC2E1A51D7BA91F00C463AF /* MaterialTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,8 +76,12 @@
 		4EC2E1761D7B9F5B00C463AF /* Society2 */ = {
 			isa = PBXGroup;
 			children = (
+				4EC2E1901D7BA04400C463AF /* Util */,
+				4EC2E18F1D7BA03A00C463AF /* Resources */,
+				4EC2E18E1D7BA03300C463AF /* Model */,
+				4EC2E18D1D7BA02D00C463AF /* View */,
+				4EC2E18C1D7BA02100C463AF /* Controller */,
 				4EC2E1771D7B9F5B00C463AF /* AppDelegate.swift */,
-				4EC2E1791D7B9F5B00C463AF /* ViewController.swift */,
 				4EC2E17B1D7B9F5B00C463AF /* Main.storyboard */,
 				4EC2E1811D7B9F5B00C463AF /* Assets.xcassets */,
 				4EC2E1831D7B9F5B00C463AF /* LaunchScreen.storyboard */,
@@ -65,6 +89,52 @@
 				4EC2E17E1D7B9F5B00C463AF /* Society2.xcdatamodeld */,
 			);
 			path = Society2;
+			sourceTree = "<group>";
+		};
+		4EC2E18C1D7BA02100C463AF /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4EC2E1791D7B9F5B00C463AF /* ViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		4EC2E18D1D7BA02D00C463AF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4EC2E19D1D7BA24500C463AF /* MaterialView.swift */,
+				4EC2E1A31D7BA75E00C463AF /* MaterialButton.swift */,
+				4EC2E1A51D7BA91F00C463AF /* MaterialTextField.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		4EC2E18E1D7BA03300C463AF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		4EC2E18F1D7BA03A00C463AF /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4EC2E1911D7BA08500C463AF /* NotoSans-Bold.ttf */,
+				4EC2E1921D7BA08500C463AF /* NotoSans-BoldItalic.ttf */,
+				4EC2E1931D7BA08500C463AF /* NotoSans-Italic.ttf */,
+				4EC2E1941D7BA08500C463AF /* NotoSans-Regular.ttf */,
+				4EC2E1991D7BA0A700C463AF /* facebook-icon.png */,
+				4EC2E19B1D7BA0B000C463AF /* logo.jpg */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		4EC2E1901D7BA04400C463AF /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				4EC2E19F1D7BA2F700C463AF /* Constants.swift */,
+			);
+			name = Util;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,9 +195,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4EC2E1951D7BA08500C463AF /* NotoSans-Bold.ttf in Resources */,
 				4EC2E1851D7B9F5B00C463AF /* LaunchScreen.storyboard in Resources */,
+				4EC2E1961D7BA08500C463AF /* NotoSans-BoldItalic.ttf in Resources */,
+				4EC2E1971D7BA08500C463AF /* NotoSans-Italic.ttf in Resources */,
+				4EC2E19C1D7BA0B000C463AF /* logo.jpg in Resources */,
+				4EC2E19A1D7BA0A700C463AF /* facebook-icon.png in Resources */,
 				4EC2E1821D7B9F5B00C463AF /* Assets.xcassets in Resources */,
 				4EC2E17D1D7B9F5B00C463AF /* Main.storyboard in Resources */,
+				4EC2E1981D7BA08500C463AF /* NotoSans-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,9 +214,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4EC2E1A01D7BA2F700C463AF /* Constants.swift in Sources */,
 				4EC2E1801D7B9F5B00C463AF /* Society2.xcdatamodeld in Sources */,
+				4EC2E1A41D7BA75E00C463AF /* MaterialButton.swift in Sources */,
 				4EC2E17A1D7B9F5B00C463AF /* ViewController.swift in Sources */,
 				4EC2E1781D7B9F5B00C463AF /* AppDelegate.swift in Sources */,
+				4EC2E19E1D7BA24500C463AF /* MaterialView.swift in Sources */,
+				4EC2E1A61D7BA91F00C463AF /* MaterialTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

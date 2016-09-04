@@ -1,13 +1,21 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="NotoSans-Bold.ttf">
+            <string>NotoSans-Bold</string>
+            <string>NotoSans-Bold</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Society2" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +23,141 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ghm-24-Zd7">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="121"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="G1S-X0-DsG">
+                                        <rect key="frame" x="516" y="43" width="60" height="38"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="60" id="yAD-Ip-CmR"/>
+                                            <constraint firstAttribute="height" constant="38" id="zJ9-vq-HqQ"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="SignIn \ SignUp" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zT9-cd-Sig">
+                                        <rect key="frame" x="20" y="60" width="246" height="21"/>
+                                        <fontDescription key="fontDescription" name="NotoSans-Bold" family="Noto Sans" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.98431372549999996" green="0.18823529410000001" blue="0.19215686269999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="zT9-cd-Sig" secondAttribute="bottom" constant="40" id="ATg-GL-E5q"/>
+                                    <constraint firstItem="zT9-cd-Sig" firstAttribute="leading" secondItem="Ghm-24-Zd7" secondAttribute="leading" constant="20" id="AnG-kG-Uc8"/>
+                                    <constraint firstAttribute="height" constant="120" id="Ccn-XW-Q2f"/>
+                                    <constraint firstAttribute="bottom" secondItem="zT9-cd-Sig" secondAttribute="bottom" constant="10" id="PLN-Bs-Xui"/>
+                                    <constraint firstAttribute="trailing" secondItem="G1S-X0-DsG" secondAttribute="trailing" constant="20" id="lGd-iR-KkC"/>
+                                    <constraint firstAttribute="bottom" secondItem="G1S-X0-DsG" secondAttribute="bottom" constant="40" id="u2a-yh-o0O"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="PLN-Bs-Xui"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YVQ-BC-L6o" customClass="MaterialView" customModule="Society2" customModuleProvider="target">
+                                <rect key="frame" x="20" y="90" width="552" height="128"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" distribution="equalSpacing" alignment="center" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="JmE-3J-nFN">
+                                        <rect key="frame" x="13" y="-192" width="532" height="105"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="kSP-fh-YTu">
+                                                <rect key="frame" x="152" y="0.0" width="228" height="105"/>
+                                                <subviews>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="facebook-icon" translatesAutoresizingMaskIntoConstraints="NO" id="q9f-TM-OaT">
+                                                        <rect key="frame" x="0.0" y="15" width="100" height="75"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="100" id="AWb-4I-Rby"/>
+                                                            <constraint firstAttribute="height" constant="75" id="kg5-1E-Bqe"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zrC-av-chW" customClass="MaterialButton" customModule="Society2" customModuleProvider="target">
+                                                        <rect key="frame" x="100" y="38" width="128" height="30"/>
+                                                        <color key="backgroundColor" red="0.22745098039215686" green="0.34901960784313724" blue="0.59607843137254901" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <state key="normal" title="FACEBOOK LOGIN">
+                                                            <color key="titleColor" red="0.91967147439999997" green="0.91967147439999997" blue="0.91967147439999997" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </state>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="125" id="5sm-2q-ovv"/>
+                                    <constraint firstAttribute="trailing" secondItem="JmE-3J-nFN" secondAttribute="trailing" constant="10" id="Ecn-k8-Rtp"/>
+                                    <constraint firstItem="JmE-3J-nFN" firstAttribute="top" secondItem="YVQ-BC-L6o" secondAttribute="top" constant="10" id="dOf-ri-BAm"/>
+                                    <constraint firstAttribute="bottom" secondItem="JmE-3J-nFN" secondAttribute="bottom" constant="10" id="eEe-Yp-IoJ"/>
+                                    <constraint firstItem="JmE-3J-nFN" firstAttribute="leading" secondItem="YVQ-BC-L6o" secondAttribute="leading" constant="10" id="sLC-ka-kdS"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aVV-SA-lOd" customClass="MaterialView" customModule="Society2" customModuleProvider="target">
+                                <rect key="frame" x="20" y="236" width="552" height="295"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="vnm-UC-KsU">
+                                        <rect key="frame" x="8" y="14" width="540" height="144"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email LogIn \ SignUp" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mac-u1-QQ2">
+                                                <rect key="frame" x="0.0" y="0.0" width="540" height="24"/>
+                                                <fontDescription key="fontDescription" name="NotoSans-Bold" family="Noto Sans" pointSize="17"/>
+                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eHv-AJ-tlP" customClass="MaterialTextField" customModule="Society2" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="34" width="540" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qpp-PV-G7A" customClass="MaterialTextField" customModule="Society2" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="74" width="540" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wfy-d6-hqc" customClass="MaterialButton" customModule="Society2" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="114" width="540" height="30"/>
+                                                <color key="backgroundColor" red="1" green="0.062532576470000004" blue="0.04865411067" alpha="1" colorSpace="calibratedRGB"/>
+                                                <state key="normal" title="LOGIN \ SIGNUP">
+                                                    <color key="titleColor" red="0.91967147439999997" green="0.91967147439999997" blue="0.91967147439999997" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="144" id="47H-gz-giC"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="vnm-UC-KsU" firstAttribute="top" secondItem="aVV-SA-lOd" secondAttribute="top" constant="10" id="5CJ-av-TIO"/>
+                                    <constraint firstAttribute="trailing" secondItem="vnm-UC-KsU" secondAttribute="trailing" constant="10" id="9wJ-cb-Rds"/>
+                                    <constraint firstItem="vnm-UC-KsU" firstAttribute="leading" secondItem="aVV-SA-lOd" secondAttribute="leading" constant="10" id="ZR1-Ok-MBu"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.94783653846153848" green="0.94783653846153848" blue="0.94783653846153848" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="Ghm-24-Zd7" secondAttribute="trailing" id="5nQ-pR-apA"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="YVQ-BC-L6o" secondAttribute="trailing" constant="8" id="5pd-P3-giI"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="aVV-SA-lOd" secondAttribute="trailing" id="86H-RV-dUe"/>
+                            <constraint firstItem="Ghm-24-Zd7" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="8zo-hA-i9s"/>
+                            <constraint firstItem="YVQ-BC-L6o" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="JCa-DH-Vzh"/>
+                            <constraint firstItem="Ghm-24-Zd7" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="K79-p3-EIp"/>
+                            <constraint firstItem="YVQ-BC-L6o" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="70" id="TnC-Ee-Rrm"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="aVV-SA-lOd" secondAttribute="bottom" constant="20" id="Wzt-Kn-ISQ"/>
+                            <constraint firstItem="aVV-SA-lOd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="nRO-ti-eTG"/>
+                            <constraint firstItem="aVV-SA-lOd" firstAttribute="top" secondItem="YVQ-BC-L6o" secondAttribute="bottom" constant="20" id="yoB-m4-QVc"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="277" y="349"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="facebook-icon" width="512" height="512"/>
+        <image name="logo" width="600" height="370"/>
+    </resources>
 </document>
