@@ -11,3 +11,4 @@ import UIKit
 
 let SHADOW_COLOR: CGFloat = 155.0 / 255.0
 let KEY_UID = "uid"
+

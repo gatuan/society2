@@ -124,6 +124,9 @@
                                                 <state key="normal" title="LOGIN \ SIGNUP">
                                                     <color key="titleColor" red="0.91967147439999997" green="0.91967147439999997" blue="0.91967147439999997" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="attemptLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bYV-B4-5t4"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -154,6 +157,8 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="emailField" destination="eHv-AJ-tlP" id="Tgr-Vt-Boq"/>
+                        <outlet property="passwordField" destination="Qpp-PV-G7A" id="iSL-W2-4ZZ"/>
                         <segue destination="CaO-QC-7Np" kind="show" identifier="loggedIn" id="j6v-mt-NvF"/>
                     </connections>
                 </viewController>
