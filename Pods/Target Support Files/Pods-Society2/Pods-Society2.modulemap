@@ -1,0 +1,6 @@
+framework module Pods_Society2 {
+  umbrella header "Pods-Society2-umbrella.h"
+
+  export *
+  module * { export * }
+}
