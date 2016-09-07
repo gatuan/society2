@@ -88,9 +88,13 @@ class ViewController: UIViewController {
                             NSUserDefaults.standardUserDefaults().setValue(user?.uid, forKey: KEY_UID)
                             
                             let credential = FIREmailPasswordAuthProvider.credentialWithEmail(email, password: pwd)
-                            FIRAuth.auth()?.signInWithCredential(credential) { (user, error) in
-                            self.showErrorAlert("Account Created", msg: "Account did not exist, so an account with username \(email) was created")
-                            self.performSegueWithIdentifier("loggedIn", sender: nil)
+                            FIRAuth.auth()?.signInWithCredential(credential) { (authData, error) in
+                                
+                                let user = ["provider": credential.provider, "test": "it really works on email as well"]
+                                DataService.ds.createFirebaseUser(authData!.uid, user: user)
+                                
+                                self.showErrorAlert("Account Created", msg: "Account did not exist, so an account with username \(email) was created")
+                                self.performSegueWithIdentifier("loggedIn", sender: nil)
                             }
                         }
                     })
