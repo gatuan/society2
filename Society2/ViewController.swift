@@ -49,13 +49,17 @@ class ViewController: UIViewController {
             
             let credential = FIRFacebookAuthProvider.credentialWithAccessToken(FBSDKAccessToken.currentAccessToken().tokenString)
             
-            FIRAuth.auth()?.signInWithCredential(credential) { (user, error) in
+            FIRAuth.auth()?.signInWithCredential(credential) { (authData, error) in
             
                 if error != error {
                     print("login failed \(error)")
                 } else {
                     print("login successfull \(credential)")
-                    NSUserDefaults.standardUserDefaults().setValue(user?.uid, forKey: KEY_UID)
+                    
+                    let user = ["provider": credential.provider, "test": "it really works"]
+                    DataService.ds.createFirebaseUser(authData!.uid, user: user)
+                    
+                    NSUserDefaults.standardUserDefaults().setValue(authData?.uid, forKey: KEY_UID)
                     self.performSegueWithIdentifier("loggedIn", sender: nil)
                 }
             }
@@ -92,7 +96,7 @@ class ViewController: UIViewController {
                     })
                 }
             } else {
-                self.performSegueWithIdentifier("loogedIn", sender: nil)
+                self.performSegueWithIdentifier("loggedIn", sender: nil)
                 }
             }
         } else {

@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		4E3E91B91D7C7E1F0006AA9B /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3E91B81D7C7E1F0006AA9B /* DataService.swift */; };
 		4E3E91BB1D7C7EEC0006AA9B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4E3E91BA1D7C7EEC0006AA9B /* GoogleService-Info.plist */; };
+		4EB89CE41D7CCF4E00BE71DD /* profile.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4EB89CE01D7CCF4E00BE71DD /* profile.jpg */; };
+		4EB89CE51D7CCF4E00BE71DD /* sample.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4EB89CE11D7CCF4E00BE71DD /* sample.jpg */; };
+		4EB89CE81D7CD05F00BE71DD /* heart_empty2.png in Resources */ = {isa = PBXBuildFile; fileRef = 4EB89CE61D7CD05F00BE71DD /* heart_empty2.png */; };
+		4EB89CE91D7CD05F00BE71DD /* heart_full2.png in Resources */ = {isa = PBXBuildFile; fileRef = 4EB89CE71D7CD05F00BE71DD /* heart_full2.png */; };
+		4EB89CEF1D7CD79E00BE71DD /* NewsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB89CEE1D7CD79E00BE71DD /* NewsVC.swift */; };
+		4EB89CF11D7CD93300BE71DD /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB89CF01D7CD93300BE71DD /* PostCell.swift */; };
 		4EC2E1781D7B9F5B00C463AF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC2E1771D7B9F5B00C463AF /* AppDelegate.swift */; };
 		4EC2E17A1D7B9F5B00C463AF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC2E1791D7B9F5B00C463AF /* ViewController.swift */; };
 		4EC2E17D1D7B9F5B00C463AF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EC2E17B1D7B9F5B00C463AF /* Main.storyboard */; };
@@ -36,6 +42,12 @@
 		3B1210B763638E603B11C158 /* Pods-Society2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Society2.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Society2/Pods-Society2.debug.xcconfig"; sourceTree = "<group>"; };
 		4E3E91B81D7C7E1F0006AA9B /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		4E3E91BA1D7C7EEC0006AA9B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		4EB89CE01D7CCF4E00BE71DD /* profile.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = profile.jpg; sourceTree = "<group>"; };
+		4EB89CE11D7CCF4E00BE71DD /* sample.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sample.jpg; sourceTree = "<group>"; };
+		4EB89CE61D7CD05F00BE71DD /* heart_empty2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = heart_empty2.png; sourceTree = "<group>"; };
+		4EB89CE71D7CD05F00BE71DD /* heart_full2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = heart_full2.png; sourceTree = "<group>"; };
+		4EB89CEE1D7CD79E00BE71DD /* NewsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsVC.swift; sourceTree = "<group>"; };
+		4EB89CF01D7CD93300BE71DD /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 		4EC2E1741D7B9F5B00C463AF /* Society2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Society2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EC2E1771D7B9F5B00C463AF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4EC2E1791D7B9F5B00C463AF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -134,6 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				4EC2E1791D7B9F5B00C463AF /* ViewController.swift */,
+				4EB89CEE1D7CD79E00BE71DD /* NewsVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -144,6 +157,7 @@
 				4EC2E19D1D7BA24500C463AF /* MaterialView.swift */,
 				4EC2E1A31D7BA75E00C463AF /* MaterialButton.swift */,
 				4EC2E1A51D7BA91F00C463AF /* MaterialTextField.swift */,
+				4EB89CF01D7CD93300BE71DD /* PostCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -164,6 +178,10 @@
 				4EC2E1941D7BA08500C463AF /* NotoSans-Regular.ttf */,
 				4EC2E1991D7BA0A700C463AF /* facebook-icon.png */,
 				4EC2E19B1D7BA0B000C463AF /* logo.jpg */,
+				4EB89CE01D7CCF4E00BE71DD /* profile.jpg */,
+				4EB89CE61D7CD05F00BE71DD /* heart_empty2.png */,
+				4EB89CE71D7CD05F00BE71DD /* heart_full2.png */,
+				4EB89CE11D7CCF4E00BE71DD /* sample.jpg */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -257,12 +275,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				4EC2E1951D7BA08500C463AF /* NotoSans-Bold.ttf in Resources */,
+				4EB89CE41D7CCF4E00BE71DD /* profile.jpg in Resources */,
+				4EB89CE91D7CD05F00BE71DD /* heart_full2.png in Resources */,
 				4EC2E1851D7B9F5B00C463AF /* LaunchScreen.storyboard in Resources */,
 				4EC2E1961D7BA08500C463AF /* NotoSans-BoldItalic.ttf in Resources */,
 				4EC2E1971D7BA08500C463AF /* NotoSans-Italic.ttf in Resources */,
+				4EB89CE51D7CCF4E00BE71DD /* sample.jpg in Resources */,
 				4EC2E19C1D7BA0B000C463AF /* logo.jpg in Resources */,
 				4EC2E19A1D7BA0A700C463AF /* facebook-icon.png in Resources */,
 				4EC2E1821D7B9F5B00C463AF /* Assets.xcassets in Resources */,
+				4EB89CE81D7CD05F00BE71DD /* heart_empty2.png in Resources */,
 				4E3E91BB1D7C7EEC0006AA9B /* GoogleService-Info.plist in Resources */,
 				4EC2E17D1D7B9F5B00C463AF /* Main.storyboard in Resources */,
 				4EC2E1981D7BA08500C463AF /* NotoSans-Regular.ttf in Resources */,
@@ -332,6 +354,8 @@
 				4EC2E19E1D7BA24500C463AF /* MaterialView.swift in Sources */,
 				4EC2E1A61D7BA91F00C463AF /* MaterialTextField.swift in Sources */,
 				4E3E91B91D7C7E1F0006AA9B /* DataService.swift in Sources */,
+				4EB89CEF1D7CD79E00BE71DD /* NewsVC.swift in Sources */,
+				4EB89CF11D7CD93300BE71DD /* PostCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
