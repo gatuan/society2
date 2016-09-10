@@ -70,5 +70,10 @@
 		<string>NotoSans-Regular.ttf</string>
 		<string>NotoSans-Italic.ttf</string>
 	</array>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
 </dict>
 </plist>

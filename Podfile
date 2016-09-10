@@ -9,4 +9,5 @@ target 'Society2' do
 pod 'Firebase', '>= 2.3.3'
 pod 'Firebase/Database'
 pod ‘Firebase/Auth'
+pod 'Alamofire', '~> 2.0'
 end

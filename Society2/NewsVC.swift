@@ -14,28 +14,31 @@ class NewsVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var tableView: UITableView!
     
     var posts = [Post]()
+    static var imageCache = NSCache()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.estimatedRowHeight = 358
+        
         
         DataService.ds.REF_POSTS.observeEventType(.Value, withBlock: { snapshot in
             print(snapshot.value)
             
             if let snapshot = snapshot.children.allObjects as? [FIRDataSnapshot] {
+                self.posts = []
                 for snap in snapshot {
                     
-                    self.posts = []
                     if let postDict = snap.value as? Dictionary<String, AnyObject> {
                         let key = snap.key
                         let post = Post(postKey: key, dictionary: postDict)
                         self.posts.append(post)
                         
                     }
-                    print("SNAP \(snapshot)")
                 }
+                print("POST COUNT \(self.posts.count)")
             }
             self.tableView.reloadData()
         })
@@ -54,13 +57,29 @@ class NewsVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         let post = posts[indexPath.row]
         
         if let cell = tableView.dequeueReusableCellWithIdentifier("PostCell") as? PostCell {
-            cell.configureCell(post)
+            cell.request?.cancel()
+            
+            var img: UIImage?
+            
+            if let url = post.imageUrl  {
+                img = NewsVC.imageCache.objectForKey(url) as? UIImage
+            }
+            cell.configureCell(post, img: img)
             return cell
         } else {
             return PostCell()
         }
              
-        return tableView.dequeueReusableCellWithIdentifier("PostCell") as! PostCell
+    }
+    
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        
+        let post = posts[indexPath.row]
+        if post.imageUrl == nil {
+            return 150
+        } else {
+            return tableView.estimatedRowHeight
+        }
     }
     
 }
