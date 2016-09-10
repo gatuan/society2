@@ -8,13 +8,17 @@
 
 import UIKit
 import Firebase
+import Alamofire
 
-class NewsVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class NewsVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var postTxtField: MaterialTextField!
+    @IBOutlet weak var imageSelectorImage: UIImageView!
     
     var posts = [Post]()
     static var imageCache = NSCache()
+    var imagePicker: UIImagePickerController!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,8 +26,9 @@ class NewsVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.estimatedRowHeight = 358
-        
-        
+        imagePicker = UIImagePickerController()
+        imagePicker.delegate = self
+            
         DataService.ds.REF_POSTS.observeEventType(.Value, withBlock: { snapshot in
             print(snapshot.value)
             
@@ -82,4 +87,50 @@ class NewsVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         }
     }
     
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage, editingInfo: [String : AnyObject]?) {
+        imagePicker.dismissViewControllerAnimated(true, completion: nil)
+        imageSelectorImage.image = image
+    }
+    
+    @IBAction func selectImage(sender: UITapGestureRecognizer) {
+        presentViewController(imagePicker, animated: true, completion: nil)
+        
+    }
+    
+    @IBAction func makePost(sender: AnyObject) {
+        
+        if let txt = postTxtField.text where txt != "" {
+            if let img = imageSelectorImage.image {
+                let urlStr = "https://post.imageshack.us/upload_api.php"
+                let url = NSURL(string: urlStr)!
+                let imageData = UIImageJPEGRepresentation(img, 0.2)!
+                let keyData = "12DJKPSU5fc3afbd01b1630cc718cae3043220f3".dataUsingEncoding(NSUTF8StringEncoding)
+                let keyJSON = "json".dataUsingEncoding(NSUTF8StringEncoding)
+                
+                Alamofire.upload(.POST, url, multipartFormData: { multiPartFormData in
+                    
+                    multiPartFormData.appendBodyPart(data: imageData, name: "fileupload", fileName: "image", mimeType: "image/jpg")
+                    multiPartFormData.appendBodyPart(data: keyData!, name: "key")
+                    multiPartFormData.appendBodyPart(data: keyJSON!, name: "format")
+                    
+                }) { encodingResults in
+                    switch encodingResults {
+                    case .Success(let upload, _,_):
+                        upload.responseJSON(completionHandler: { request, response, result in
+                            if let info = result.value as? Dictionary<String, AnyObject> {
+                                if let links = info["links"] as? Dictionary<String, AnyObject> {
+                                    if let imgLink = links["image_link"] as? String {
+                                        print("LINK: \(imgLink)")
+                                    }
+                                }
+                            }
+                        })
+                    case .Failure(let error):
+                        print(error)
+                    }
+                    
+                }
+            }
+        }
+    }
 }
