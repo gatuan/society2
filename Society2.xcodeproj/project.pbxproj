@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		4E3E91B91D7C7E1F0006AA9B /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3E91B81D7C7E1F0006AA9B /* DataService.swift */; };
 		4E3E91BB1D7C7EEC0006AA9B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4E3E91BA1D7C7EEC0006AA9B /* GoogleService-Info.plist */; };
+		4E4D62771D80E60D008BE051 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4D62761D80E60D008BE051 /* Post.swift */; };
 		4EB89CE41D7CCF4E00BE71DD /* profile.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4EB89CE01D7CCF4E00BE71DD /* profile.jpg */; };
 		4EB89CE51D7CCF4E00BE71DD /* sample.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4EB89CE11D7CCF4E00BE71DD /* sample.jpg */; };
 		4EB89CE81D7CD05F00BE71DD /* heart_empty2.png in Resources */ = {isa = PBXBuildFile; fileRef = 4EB89CE61D7CD05F00BE71DD /* heart_empty2.png */; };
@@ -42,6 +43,7 @@
 		3B1210B763638E603B11C158 /* Pods-Society2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Society2.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Society2/Pods-Society2.debug.xcconfig"; sourceTree = "<group>"; };
 		4E3E91B81D7C7E1F0006AA9B /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		4E3E91BA1D7C7EEC0006AA9B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		4E4D62761D80E60D008BE051 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		4EB89CE01D7CCF4E00BE71DD /* profile.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = profile.jpg; sourceTree = "<group>"; };
 		4EB89CE11D7CCF4E00BE71DD /* sample.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sample.jpg; sourceTree = "<group>"; };
 		4EB89CE61D7CD05F00BE71DD /* heart_empty2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = heart_empty2.png; sourceTree = "<group>"; };
@@ -165,6 +167,7 @@
 		4EC2E18E1D7BA03300C463AF /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				4E4D62761D80E60D008BE051 /* Post.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -347,6 +350,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4EC2E1A01D7BA2F700C463AF /* Constants.swift in Sources */,
+				4E4D62771D80E60D008BE051 /* Post.swift in Sources */,
 				4EC2E1801D7B9F5B00C463AF /* Society2.xcdatamodeld in Sources */,
 				4EC2E1A41D7BA75E00C463AF /* MaterialButton.swift in Sources */,
 				4EC2E17A1D7B9F5B00C463AF /* ViewController.swift in Sources */,
