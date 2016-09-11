@@ -31,6 +31,12 @@ class DataService {
         return _REF_USERS
     }
     
+    var REF_USER_CURRENT: FIRDatabaseReference {
+        let uid = NSUserDefaults.standardUserDefaults().valueForKey(KEY_UID) as! String
+        let user = REF_BASE.child("users").child(uid)
+        return user
+    }
+    
     func createFirebaseUser(uid:String, user: Dictionary<String, String>) {
         REF_USERS.childByAppendingPath(uid).setValue(user)
     }
